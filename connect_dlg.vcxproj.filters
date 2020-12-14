@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Get_Pic_mfc">
+      <UniqueIdentifier>{1c6c7c31-73da-4ace-8bc6-6998166e6406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\GetPic_mfc">
+      <UniqueIdentifier>{b4150316-2c60-4b4b-94f8-b6ef09bb55a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\GroupInclude">
+      <UniqueIdentifier>{3a2c233e-dbf6-4d2a-9b2d-11d7e288101f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\CamControl">
+      <UniqueIdentifier>{75ea59c6-75f0-40bb-89e6-fddb5f66fa5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\CamControl">
+      <UniqueIdentifier>{5fc94ebc-d839-4ebd-a088-d1bb2be0248f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\PictureAnalysis">
+      <UniqueIdentifier>{8dae0ce4-666a-4e01-9bc8-619db5737b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\PictureAnalysis">
+      <UniqueIdentifier>{6bfbc876-1b16-4b7d-81f8-e3f4f8ed6d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ExternalLib">
+      <UniqueIdentifier>{1e124997-5090-4e91-bc81-06b13ad3413e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ExternalLib\EDLIB">
+      <UniqueIdentifier>{66a4de6d-3cb3-4880-81e6-3aa555c2159f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\ExternalLib">
+      <UniqueIdentifier>{60a36082-988d-48f8-81fc-ee08c204d42b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\ExternalLib\EDLIB">
+      <UniqueIdentifier>{81fddbd9-c26e-4b12-8e24-c0ea43911573}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="connect_dlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="connect_dlgDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GetPic_mfc.h">
+      <Filter>头文件\Get_Pic_mfc</Filter>
+    </ClInclude>
+    <ClInclude Include="CPublic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv_include.h">
+      <Filter>头文件\GroupInclude</Filter>
+    </ClInclude>
+    <ClInclude Include="STL_include.h">
+      <Filter>头文件\GroupInclude</Filter>
+    </ClInclude>
+    <ClInclude Include="solution_opencv.h">
+      <Filter>头文件\PictureAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="EDLIB\ED.h">
+      <Filter>头文件\ExternalLib\EDLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="EDLIB\EDCircles.h">
+      <Filter>头文件\ExternalLib\EDLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="EDLIB\EDColor.h">
+      <Filter>头文件\ExternalLib\EDLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="EDLIB\EDLib.h">
+      <Filter>头文件\ExternalLib\EDLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="EDLIB\EDLines.h">
+      <Filter>头文件\ExternalLib\EDLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="EDLIB\EDPF.h">
+      <Filter>头文件\ExternalLib\EDLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="EDLIB\NFA.h">
+      <Filter>头文件\ExternalLib\EDLIB</Filter>
+    </ClInclude>
+    <ClInclude Include="CamControl_interface\CamCon.h">
+      <Filter>头文件\CamControl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="connect_dlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="connect_dlgDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GetPic_mfc.cpp">
+      <Filter>源文件\GetPic_mfc</Filter>
+    </ClCompile>
+    <ClCompile Include="solution_opencv.cpp">
+      <Filter>源文件\PictureAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="EDLIB\ED.cpp">
+      <Filter>源文件\ExternalLib\EDLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="EDLIB\EDCircles.cpp">
+      <Filter>源文件\ExternalLib\EDLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="EDLIB\EDColor.cpp">
+      <Filter>源文件\ExternalLib\EDLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="EDLIB\EDLines.cpp">
+      <Filter>源文件\ExternalLib\EDLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="EDLIB\EDPF.cpp">
+      <Filter>源文件\ExternalLib\EDLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="EDLIB\NFA.cpp">
+      <Filter>源文件\ExternalLib\EDLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="EDLIB\test.cpp">
+      <Filter>源文件\ExternalLib\EDLIB</Filter>
+    </ClCompile>
+    <ClCompile Include="CPublic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CamControl_interface\CamCon.cpp">
+      <Filter>源文件\CamControl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="connectdlg.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\connectdlg.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\connect_dlg.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
