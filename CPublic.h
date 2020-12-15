@@ -1,7 +1,7 @@
 #pragma once
 #include "opencv_include.h"
 #include "STL_include.h"
-
+#include <bitset>
 
 //相机参数，放缩比
 enum
@@ -52,17 +52,27 @@ struct CPublic
 		return ro1;
 	}
 
+	static std::vector<bool>&  allRuntimeFlag()
+	{
+		static std::vector<bool> b;
+		return b;
+	}
+
 	//返回相机2的ROI，暂时先不用做
 	static cv::Rect* ROI_2();
 
-	/*static bool& Selection_enabled()
+	/* static bool& Selection_enabled()
 	{
 		static bool flag = false;
 		return flag;
-	}*/
+	}
+	*/
 	static bool Selection_enabled;
 
 
+	
+
+	
 	
 };
 
