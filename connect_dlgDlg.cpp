@@ -233,7 +233,11 @@ void CconnectdlgDlg::OnBnClickedOpenPic()
 		picPath = dlg.GetPathName();  //获取图片路径
 	}
 	//CString to string  使用这个方法记得字符集选用“使用多字节字符”，不然会报错
-	string picpath = picPath.GetBuffer(0);
+	// Convert a TCHAR string to a LPCSTR
+	CT2CA pszConvertedAnsiString(picPath);
+	// construct a std::string using the LPCSTR input
+	std::string strStd(pszConvertedAnsiString);
+	string picpath(strStd);
 	Mat image;//输入原图
 	image = cv::imread(picpath);
 	Mat imagedst;

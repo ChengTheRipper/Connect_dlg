@@ -11,7 +11,7 @@ int CamCon::init_all_cam(vector<shared_ptr<SingleCam>>& cam_vec)
 		int i = 0;
 		const size_t totalDeviceNum = vectorDeviceInfo.size();
 		CString a;
-		a.Format("%d 个设备", totalDeviceNum);
+		a.Format(_T("%d 个设备"), totalDeviceNum);
 		AfxMessageBox(a);
 		while (i < totalDeviceNum)
 		{
