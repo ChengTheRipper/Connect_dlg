@@ -53,15 +53,16 @@ public:
 	CamCon() { CamInit(); };
 	~CamCon() { CamUnInit(); };
 	int init_all_cam(vector<shared_ptr<SingleCam>>& cam_vec);
+	//初始化函数
+	int CamInit();
+	int CamUnInit();
 public:
 	
 private:
 	//禁止复制
 	CamCon(const CamCon&);
 	CamCon operator=(const CamCon&);
-	//初始化函数
-	int CamInit();
-	int CamUnInit();
+	
 	gxdeviceinfo_vector vectorDeviceInfo;//整个总线包含的相机信息
 	Mat img;
 	
@@ -70,17 +71,27 @@ class SingleCam//独立相机
 {
 public:
 
-	SingleCam(CGXDevicePointer m_ODP , CGXStreamPointer m_OSP, cv::Rect roi = cv::Rect(PC_WIDTH / 3, 0, PC_WIDTH / 3, PC_HEIGHT) );
+	SingleCam(CGXDevicePointer m_ODP , CGXStreamPointer m_OSP, gxstring m_serialNum,cv::Rect roi = cv::Rect(PC_WIDTH / 3, 0, PC_WIDTH / 3, PC_HEIGHT) );
 	~SingleCam();
 public:
 	void Record_start();
 	void Record_stop();
 	cv::Rect ROI;
+
+	inline bool& IsOffline()
+	{
+		return m_bIsOffline;
+	}
+
 private:
-	//禁止复制相机,想办法绕过去，这里允许复制使得vec可行
+	//禁止复制相机
 	SingleCam(const SingleCam&);
 	const SingleCam& operator=(const SingleCam&);
-	//
+	//掉线处理
+	void __ProcessOffline();
+	//重连函数
+	void __Recovery();
+	//各种Handler
 	IDeviceOfflineEventHandler *pDeviceOfflineEventHandler;///<掉线事件回调对象
 	IFeatureEventHandler       *pFeatureEventHandler;///<远端设备事件回调对象
 	ICaptureEventHandler       *pCaptureEventHandler;///<采集回调对象
@@ -89,7 +100,15 @@ private:
 	CGXDevicePointer ObjDevicePtr;//设备指针
 	CGXStreamPointer ObjStreamPtr;//打开流
 
-	
+	GX_DEVICE_OFFLINE_CALLBACK_HANDLE hDeviceOffline; //掉线回调句柄
+
+	//标志位，表示设备是否离线
+	bool m_bIsOffline;
+	bool m_bIsSnap;
+	bool m_bIsOpened;
+
+	//序列号
+	gxstring serialNum;
 };
 
 
@@ -109,5 +128,5 @@ static vector<shared_ptr<SingleCam>>& SCV()
 	return c1;
 }
 
-void NormalROI(Rect& input);
+
 
