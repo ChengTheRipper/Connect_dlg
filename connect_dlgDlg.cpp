@@ -388,6 +388,12 @@ void CconnectdlgDlg::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 		if (pSlider->GetDlgCtrlID() == IDC_SB_ROI1_H)
 		{
 			int ROI1_width = m_slider_ROI1_width.GetPos(); //获取roi1的宽度
+			int temp = ROI1.x + ROI1_width;
+			if (temp >= PC_WIDTH)
+			{
+				ROI1_width = PC_WIDTH - ROI1.x;
+			}
+			m_slider_ROI1_width.SetPos(ROI1_width);//滚动条位置
 			SetDlgItemInt(IDC_EDIT_SB1_HORI, ROI1_width);
 			ROI1.width = ROI1_width;
 
@@ -395,8 +401,15 @@ void CconnectdlgDlg::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
 		else if (pSlider->GetDlgCtrlID() == IDC_SB_ROI1_V)
 		{
 			int ROI1_height = m_slider_ROI1_height.GetPos(); //获取roi1的高度
+			int temp = ROI1.y + ROI1_height;
+			if (temp >= PC_HEIGHT)
+			{
+				ROI1_height = PC_HEIGHT - ROI1.y;
+			}
+			m_slider_ROI1_height.SetPos(ROI1_height);//滚动条位置
 			SetDlgItemInt(IDC_EDIT_SB1_VERT, ROI1_height);
 			ROI1.height = ROI1_height;
+
 		}
 		///temp
 		/// 
